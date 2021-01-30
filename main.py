@@ -50,13 +50,10 @@ async def on_message(message):
 
   if message.content.startswith('hello bot'):
     await message.channel.send('hello')
-
-  if message.content.startswith('fuck'):
-    await message.channel.send('i dont wanna feel like this :D')
-    await message.channel.send('who is the music artist for the above song?')
-
-  if message.content.startswith('corpse'):
-    await message.channel.send('haha you got it right smartass')
+  if message.content.startswith('hello'):
+    await message.channel.send('hi')
+   if message.content.startswith('who developed you sicko?'):
+    await message.channel.send('@prathamkrishna did')
 
   if any(word in msg for word in sarcasm_text):
     await message.channel.send('funny')
@@ -71,11 +68,8 @@ async def on_message(message):
   if any(word in msg for word in sad_words):
     await message.channel.send(random.choice(starter_encouragement))
 
-  if msg.startswith("who tf are you"):
+  if msg.startswith("who are you"):
     await message.channel.send("hi im sicko, nice meeting you")
-
-  if msg.startswith("your bot is annoying"):
-    await message.channel.send("telling admin to remove you, bye bro.")
 
 keep_alive()
 
